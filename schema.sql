@@ -2,6 +2,7 @@ DROP TABLE IF EXISTS books;
 DROP TABLE IF EXISTS authors;
 DROP TABLE IF EXISTS patrons;
 DROP TABLE IF EXISTS genres;
+DROP TABLE IF EXISTS reviews
 
 CREATE TABLE authors (
   id INTEGER PRIMARY KEY,
@@ -28,5 +29,13 @@ CREATE TABLE genres (
   id INTEGER PRIMARY KEY,
   name VARCHAR(255),
   description VARCHAR(65536)
+);
+
+CREATE TABLE reviews (
+  id INTEGER PRIMARY KEY,
+  comments VARCHAR (65535),
+
+  book_id INTEGER,
+  patron_id INTEGER
 );
 

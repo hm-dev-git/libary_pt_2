@@ -9,5 +9,5 @@ class Author < ActiveRecord::Base
     numericality: {only_integer: true}
   })
 
-  has_one :book
+  has_many :books
 end

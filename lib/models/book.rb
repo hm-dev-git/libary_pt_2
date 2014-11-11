@@ -9,4 +9,5 @@ class Book < ActiveRecord::Base
             numericality: {only_integer: true}
 
   belongs_to :author
+  has_many :reviews
 end
